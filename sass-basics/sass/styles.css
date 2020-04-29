@@ -113,9 +113,9 @@ section h1 {
   font-weight: bold;
 }
 
-@media screen and (max-width: 3000px) and (min-width: 1200px) {
+@media screen and (max-width: 3000px) and (min-width: 1000px) {
   .lead-banner span {
-    font-size: 10px;
+    font-size: 75px;
   }
 }
 
@@ -147,9 +147,9 @@ section h1 {
   font-weight: bold;
 }
 
-@media screen and (max-width: 3000px) and (min-width: 1200px) {
+@media screen and (max-width: 3000px) and (min-width: 1000px) {
   .lessons-banner span {
-    font-size: 10px;
+    font-size: 75px;
   }
 }
 
