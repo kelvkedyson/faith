@@ -1,0 +1,86 @@
+//files to delete after completion are: mixins.css, mixins.min.css, reset.css, reset.min.css, variables.css, variables.min.css
+@import "./reset";
+@import "./variables";
+@import "./mixins";
+#main-nav {
+    background: $deepBlue;
+    ul {
+        width: 100%;
+        @include clearFix;
+    }
+    li {
+        float: left;
+        width: (100% / 6);
+        @include mQ(600px) {
+            width: 100%;
+        }
+    }
+    a {
+        color: $offWhite;
+        text-decoration: none;
+        padding: 16px;
+        display: block;
+        text-align: center;
+        transition: .7s;
+        &:hover {
+            background: lighten($deepBlue, 4);
+            color: orange;
+        }
+    }
+} //end main-nav
+section h1 {
+    font-size: $sectionHeading;
+    color: $deepBlue;
+}
+
+.lead-banner {
+    @include banner;
+    text-align: right;
+}
+
+.lessons-banner {
+    @include banner;
+    li {
+        text-transform: uppercase;
+        max-width: 500px;
+        font-size: 20px;
+        margin: 60px 0px;
+    }
+}
+
+#services {
+    margin-bottom: 60px;
+    //padding-bottom: 30px;
+    h1 {
+        text-align: center;
+        padding-top: 20px;
+    }
+    li {
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+        width: (100% / 3);
+    }
+    img {
+        width: 60%;
+        margin: 20px 20%;
+    }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $deepBlue;
+        &:hover {
+            color: complement($deepBlue);
+        }
+    }
+    ul {
+        @include clearFix;
+    }
+}
+
+#projects li {
+    @include grid(4, 2%);
+    img {
+        width: 100%;
+    }
+}
